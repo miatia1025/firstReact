@@ -1,0 +1,104 @@
+.app-container {
+  padding: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header select {
+  padding: 8px 12px;
+  font-size: 16px;
+}
+
+.form-container {
+  margin-top: 20px;
+}
+
+.dark-mode .form-container input,
+.dark-mode .form-container select,
+.dark-mode .form-container textarea {
+  background-color: #333;
+  color: white;
+  border-color: #555;
+}
+
+.dark-mode .form-container label {
+  color: #ddd;
+}
+
+.dark-mode .form-container button {
+  background-color: #444;
+  color: white;
+  border: none;
+}
+
+.dark-mode select {
+  background-color: #333;
+  color: white;
+  border-color: #555;
+}
+
+/* Ensure dropdown options are also styled in dark mode */
+.MuiSelect-root,
+.MuiSelect-select,
+.MuiMenu-paper,
+.MuiList-root {
+  background-color: #333 !important;
+  color: white !important;
+  border-color: #555 !important;
+}
+
+.dark-mode .MuiFormControl-root {
+  background-color: #333;
+  color: white;
+}
+
+.dark-mode .MuiCheckbox-root .MuiSvgIcon-root,
+.dark-mode .MuiRadio-root .MuiSvgIcon-root {
+  fill: white;
+}
+
+.dark-mode .MuiAccordion-root {
+  background-color: #333;
+  color: white;
+  border-color: #555;
+}
+
+.dark-mode .MuiAccordionSummary-root {
+  background-color: #444;
+}
+
+.dark-mode .MuiAccordionDetails-root {
+  background-color: #555;
+  color: white;
+  border-color: #777;
+}
+
+/* Add focus styles for all inputs and labels */
+.MuiFormControl-root:focus-within label,
+.MuiFormControl-root:focus-within input,
+.MuiFormControl-root:focus-within select,
+.MuiFormControl-root:focus-within .MuiCheckbox-root .MuiSvgIcon-root,
+.MuiFormControl-root:focus-within .MuiRadio-root .MuiSvgIcon-root {
+  color: #1976d2; /* Blue color for focus */
+  border-color: #1976d2;
+}
+
+.dark-mode .MuiFormControl-root:focus-within label,
+.dark-mode .MuiFormControl-root:focus-within input,
+.dark-mode .MuiFormControl-root:focus-within select,
+.dark-mode .MuiFormControl-root:focus-within .MuiCheckbox-root .MuiSvgIcon-root,
+.dark-mode .MuiFormControl-root:focus-within .MuiRadio-root .MuiSvgIcon-root {
+  color: #90caf9; /* Light blue color for focus in dark mode */
+  border-color: #90caf9;
+}
