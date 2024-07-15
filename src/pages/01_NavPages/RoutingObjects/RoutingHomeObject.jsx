@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter, BrowserRouter, Route, Routes } from "react-router-dom";
 import { HomePage } from "../HomePage";
 import { AboutPage } from "../AboutPage";
 import { ContactPage } from "../ContactPage";
@@ -11,6 +11,13 @@ import { ListsShowcase } from "../../02_ContentPages/ListsShowcase";
 import { AccordionsShowcase } from "../../02_ContentPages/AccordionsShowcase";
 import { ImagesShowcase } from "../../02_ContentPages/ImagesShowcase";
 import { CardsShowcase } from "../../02_ContentPages/CardsShowcase";
+
+const Router = ({ children }) => {
+  if (process.env.REACT_APP_ROUTER_TYPE === "hash") {
+    return <HashRouter basename="/">{children}</HashRouter>;
+  }
+  return <BrowserRouter>{children}</BrowserRouter>;
+};
 
 export function RoutingHomeObject() {
   return (

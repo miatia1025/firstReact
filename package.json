@@ -2,6 +2,7 @@
   "name": "01_react-jsx",
   "version": "0.1.0",
   "private": true,
+  "homepage": "./",
   "dependencies": {
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.4",
@@ -19,6 +20,8 @@
     "@testing-library/user-event": "^13.5.0",
     "antd": "^5.19.1",
     "bootstrap": "^5.3.3",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
     "radix-ui": "^1.0.1",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.4",
@@ -29,8 +32,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "cross-env REACT_APP_ROUTER_TYPE=browser react-scripts start",
+    "build": "cross-env REACT_APP_ROUTER_TYPE=hash react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

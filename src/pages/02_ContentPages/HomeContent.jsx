@@ -1,32 +1,34 @@
-import { Link } from "@mui/material";
+import React from "react";
+import { Link as MuiLink } from "@mui/material";
+import { Link } from "react-router-dom";
 
 export const HomeContent = () => {
   return (
     <div>
-      <Link display={"block"} href="/LibrariesShowcase">
+      <MuiLink component={Link} to="/LibrariesShowcase" display="block">
         ライブラリ比較
-      </Link>
-      <Link display={"block"} href="/ButtonsShowcase">
+      </MuiLink>
+      <MuiLink component={Link} to="/ButtonsShowcase" display="block">
         ボタン関連
-      </Link>
-      <Link display={"block"} href="/FormShowcase">
+      </MuiLink>
+      <MuiLink component={Link} to="/FormShowcase" display="block">
         フォーム関連
-      </Link>
-      <Link display={"block"} href="/NumbersShowcase">
+      </MuiLink>
+      <MuiLink component={Link} to="/NumbersShowcase" display="block">
         数値関連
-      </Link>
-      <Link display={"block"} href="/ListsShowcase">
+      </MuiLink>
+      <MuiLink component={Link} to="/ListsShowcase" display="block">
         リスト関連
-      </Link>
-      <Link display={"block"} href="/AccordionsShowcase">
+      </MuiLink>
+      <MuiLink component={Link} to="/AccordionsShowcase" display="block">
         アコーディオン関連
-      </Link>
-      <Link display={"block"} href="/ImagesShowcase">
+      </MuiLink>
+      <MuiLink component={Link} to="/ImagesShowcase" display="block">
         画像関連
-      </Link>
-      <Link display={"block"} href="/CardsShowcase">
+      </MuiLink>
+      <MuiLink component={Link} to="/CardsShowcase" display="block">
         カード関連
-      </Link>
+      </MuiLink>
     </div>
   );
 };
